@@ -7,7 +7,7 @@ firstNames = []
 lastNames = []
 suffixes = []
 
-with open("Code/Roleplaying Names List.csv", "r") as names:
+with open("Roleplaying Names List.csv", "r") as names:
     csv_reader = csv.reader(names)
     next(csv_reader)
     for line in csv_reader:

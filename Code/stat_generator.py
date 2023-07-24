@@ -25,6 +25,7 @@ def generate_stat():
     return statTotal
 
 #-- generates a value for strength, dexterity, constitution, intelligence, wisdom and charisma stats
+#-- also handles rerolling in case the total and no. >= 15 thresholds are not met
 def assign_stats():
     arrayIndex = 0
     if statSpread == []:
