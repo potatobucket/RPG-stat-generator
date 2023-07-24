@@ -1,3 +1,6 @@
+import random as rnd
+import parameters
+
 class Character:
     def __init__(self, name = "Jimothy", race = "Human", characterClass = "Fighter"):
         self.name = name
@@ -11,3 +14,6 @@ class Character:
             "Wisdom" : 0,
             "Charisma" : 0
         }
+
+if __name__ == "__main__":
+    print(rnd.choice(parameters.races).title())
