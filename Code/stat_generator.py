@@ -1,5 +1,4 @@
 import random as rnd
-from time import sleep as slp
 import character
 import parameters as prm
 
@@ -27,9 +26,17 @@ def generate_stat():
 
 #-- generates a value for strength, dexterity, constitution, intelligence, wisdom and charisma stats
 def assign_stats():
-    for stat in newGuy.stats:
-        newGuy.stats[stat] = generate_stat()
-        statSpread.append(newGuy.stats[stat])
+    arrayIndex = 0
+    if statSpread == []:
+        for stat in newGuy.stats:
+            newGuy.stats[stat] = generate_stat()
+            statSpread.append(newGuy.stats[stat])
+    else:
+        for value in range(len(statSpread)):
+            statSpread[value] = generate_stat()
+        for key in newGuy.stats.keys():
+            newGuy.stats[key] = statSpread[arrayIndex]
+            arrayIndex += 1
 
 #-- returns the total value of all of the character's stats added together
 def check_stat_total(spread = statSpread):
@@ -71,5 +78,4 @@ if __name__ == "__main__":
         check_stat_total()
         check_number_bigness()
 
-    print(statSpread)
     display_character()

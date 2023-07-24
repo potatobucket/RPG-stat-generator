@@ -14,8 +14,8 @@ The goal (paraphrased from https://rosettacode.org/wiki/RPG_attributes_generator
  - - - ~~Wisdom~~
  - - - ~~Charisma~~
  - ~~Preserve the order in which the numbers were generated~~ ✔
- - The total of all values must be at least 75
- - At least two values must be 15 or more
+ - ~~The total of all values must be at least 75~~ ✔
+ - ~~At least two values must be 15 or more~~ ✔
 
 Bonus goals:
 

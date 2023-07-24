@@ -1,8 +1,25 @@
 import stat_generator as sg
 
-sg.assign_stats()
+statArray = []
+testArray = [10, 10, 10, 10, 10, 10]
 
-print(f"Name: {sg.newGuy.firstName} {sg.newGuy.lastName}")
-print(f"Race: {sg.newGuy.race.title()} | Class: {sg.newGuy.characterClass.title()}")
-for stat in sg.newGuy.stats:
-    print(f"    {stat}: {sg.newGuy.stats[stat]}")
+def assign_stats():
+    arrayIndex = 0
+    if testArray == []:
+        for stat in sg.newGuy.stats:
+            sg.newGuy.stats[stat] = sg.generate_stat()
+            testArray.append(sg.newGuy.stats[stat])
+    else:
+        for value in range(len(testArray)):
+            testArray[value] = sg.generate_stat()
+        for key in sg.newGuy.stats.keys():
+            sg.newGuy.stats[key] = testArray[arrayIndex]
+            arrayIndex += 1
+
+print(sg.newGuy.stats)
+assign_stats()
+print(testArray)
+print(sg.newGuy.stats)
+
+# for value in range(len(testArray)):
+#     print(testArray[value])
