@@ -1,7 +1,8 @@
 import random as rnd
 import character
+import parameters
 
-jimothy = character.Character()
+jimothy = character.Character(rnd.choice(parameters.prefixes), rnd.choice(parameters.firstNames), rnd.choice(parameters.lastNames), rnd.choice(parameters.suffixes), rnd.choice(parameters.races), rnd.choice(parameters.characterClasses))
 
 statArray = []
 statSpread = []
@@ -45,5 +46,6 @@ def pass_or_fail(statTotal, bigNumbers):
 assign_stats()
 check_stat_total()
 
-print(statSpread, check_stat_total(), check_number_bigness())
-print(pass_or_fail(check_stat_total(), check_number_bigness()))
+print(f"{jimothy.prefix} {jimothy.firstName} {jimothy.lastName}{jimothy.suffix} the {jimothy.race.title()} {jimothy.characterClass.title()}, at your service!")
+
+print(statSpread)
