@@ -65,7 +65,14 @@ if __name__ == "__main__":
     assign_stats()
     check_stat_total()
     check_number_bigness()
-    if pass_or_fail(check_stat_total(), check_number_bigness()) == False:
-        assign_stats()
-    else:
-        display_character()
+
+    while pass_or_fail(check_stat_total(), check_number_bigness()) == False:
+        if statSpread != []:
+            statSpread = []
+        else:
+            assign_stats()
+            check_stat_total()
+            check_number_bigness()
+
+    print(statSpread)
+    display_character()
