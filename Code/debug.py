@@ -1,8 +1,8 @@
 import random as rnd
 import character
-import parameters
+import parameters as prm
 
-jimothy = character.Character(rnd.choice(parameters.prefixes), rnd.choice(parameters.firstNames), rnd.choice(parameters.lastNames), rnd.choice(parameters.suffixes), rnd.choice(parameters.races), rnd.choice(parameters.characterClasses))
+newGuy = character.Character(rnd.choice(prm.prefixes), rnd.choice(prm.firstNames), rnd.choice(prm.lastNames), rnd.choice(prm.suffixes), rnd.choice(prm.races), rnd.choice(prm.characterClasses))
 
 statArray = []
 statSpread = []
@@ -20,9 +20,9 @@ def generate_stat():
     return statTotal
 
 def assign_stats():
-    for stat in jimothy.stats:
-        jimothy.stats[stat] = generate_stat()
-        statSpread.append(jimothy.stats[stat])
+    for stat in newGuy.stats:
+        newGuy.stats[stat] = generate_stat()
+        statSpread.append(newGuy.stats[stat])
 
 def check_stat_total(spread = statSpread):
     newStatTotal = 0
@@ -46,6 +46,6 @@ def pass_or_fail(statTotal, bigNumbers):
 assign_stats()
 check_stat_total()
 
-print(f"{jimothy.prefix} {jimothy.firstName} {jimothy.lastName}{jimothy.suffix} the {jimothy.race.title()} {jimothy.characterClass.title()}, at your service!")
+print(f"{newGuy.prefix} {newGuy.firstName} {newGuy.lastName}{newGuy.suffix} the {newGuy.race.title()} {newGuy.characterClass.title()}, at your service!")
 
 print(statSpread)
