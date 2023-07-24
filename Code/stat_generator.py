@@ -52,10 +52,14 @@ def pass_or_fail(statTotal, bigNumbers):
         return True
     else:
         return False
-    
-assign_stats()
-check_stat_total()
 
-print(f"{newGuy.prefix} {newGuy.firstName} {newGuy.lastName}{newGuy.suffix} the {newGuy.race.title()} {newGuy.characterClass.title()}, at your service!")
+def display_character():
+    print(f"Name: {newGuy.firstName} {newGuy.lastName}")
+    print(f"Race: {newGuy.race.title()} | Class: {newGuy.characterClass.title()}")
+    for stat in newGuy.stats:
+        print(f"    {stat}: {newGuy.stats[stat]}")
 
-print(statSpread)
+
+if __name__ == "__main__":
+    assign_stats()
+    display_character()

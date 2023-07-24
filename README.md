@@ -20,8 +20,9 @@ The goal (paraphrased from https://rosettacode.org/wiki/RPG_attributes_generator
 Bonus goals:
 
  - Manual stat allocation
- - Random names, races and classes for each generated character
+ - ~~Random names, races and classes for each generated character~~ ✔
 
 # Libraries used:
 
  - random
+ - csv
