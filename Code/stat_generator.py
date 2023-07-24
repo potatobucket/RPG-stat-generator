@@ -1,4 +1,5 @@
 import random as rnd
+from time import sleep as slp
 import character
 import parameters as prm
 
@@ -62,4 +63,9 @@ def display_character():
 
 if __name__ == "__main__":
     assign_stats()
-    display_character()
+    check_stat_total()
+    check_number_bigness()
+    if pass_or_fail(check_stat_total(), check_number_bigness()) == False:
+        assign_stats()
+    else:
+        display_character()
