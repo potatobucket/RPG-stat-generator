@@ -63,17 +63,23 @@ def pass_or_fail(statTotal, bigNumbers):
         return False
 
 def display_character():
+    print(f"Optional prefix: {newGuy.prefix}")
     print(f"Name: {newGuy.firstName} {newGuy.lastName}")
+    print(f"Optional suffix: {newGuy.suffix}")
     print(f"Race: {newGuy.race.title()} | Class: {newGuy.characterClass.title()}")
     for stat in newGuy.stats:
         print(f"    {stat}: {newGuy.stats[stat]}")
 
 
 if __name__ == "__main__":
+    #-- initializes the first set of stats for your new character and checks the
+    #-- arbitrary limits set on me by Rosetta Code
     assign_stats()
     check_stat_total()
     check_number_bigness()
 
+    #-- if the first set of stats didn't satisfy then this loop will reroll
+    #-- until it does (and took me too long to figure out)
     while pass_or_fail(check_stat_total(), check_number_bigness()) == False:
         assign_stats()
         check_stat_total()
