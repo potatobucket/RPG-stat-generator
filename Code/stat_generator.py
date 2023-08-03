@@ -63,12 +63,13 @@ def pass_or_fail(statTotal, bigNumbers):
         return False
 
 def display_character():
-    print(f"Optional prefix: {newGuy.prefix}")
-    print(f"Name: {newGuy.firstName} {newGuy.lastName}")
-    print(f"Optional suffix: {newGuy.suffix}")
-    print(f"Race: {newGuy.race.title()} | Class: {newGuy.characterClass.title()}")
+    guyID = f"""Optional prefix: {newGuy.prefix}
+    Name: {newGuy.firstName} {newGuy.lastName}
+    Optional suffix: {newGuy.suffix}
+    Race: {newGuy.race.title()} | Class: {newGuy.characterClass.title()}\n"""
     for stat in newGuy.stats:
-        print(f"    {stat}: {newGuy.stats[stat]}")
+        guyID += f"\t{stat}: {newGuy.stats[stat]}\n"
+    return guyID
 
 
 if __name__ == "__main__":
@@ -85,4 +86,4 @@ if __name__ == "__main__":
         check_stat_total()
         check_number_bigness()
 
-    display_character()
+    print(display_character())
