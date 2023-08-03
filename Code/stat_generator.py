@@ -63,7 +63,8 @@ def pass_or_fail(statTotal, bigNumbers):
         return False
 
 def display_character():
-    guyID = f"""Optional prefix: {newGuy.prefix}
+    guyID = f"""
+    Optional prefix: {newGuy.prefix}
     Name: {newGuy.firstName} {newGuy.lastName}
     Optional suffix: {newGuy.suffix}
     Race: {newGuy.race.title()} | Class: {newGuy.characterClass.title()}\n"""
