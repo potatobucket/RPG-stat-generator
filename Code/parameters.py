@@ -7,7 +7,7 @@ firstNames = []
 lastNames = []
 suffixes = []
 
-with open("C:/Users/potat/Desktop/Python Projects/RPG-stat-generator/Roleplaying Names List.csv", "r") as names:
+with open("Roleplaying Names List.csv", "r") as names:
     csv_reader = csv.DictReader(names)
     for line in csv_reader:
         if line["Prefix"] != "":
