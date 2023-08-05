@@ -72,7 +72,6 @@ def display_character():
         guyID += f"\t{stat}: {newGuy.stats[stat]}\n"
     return guyID
 
-
 if __name__ == "__main__":
     #-- initializes the first set of stats for your new character and checks the
     #-- arbitrary limits set on me by Rosetta Code
