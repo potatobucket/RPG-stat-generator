@@ -62,6 +62,16 @@ def pass_or_fail(statTotal, bigNumbers):
     else:
         return False
 
+def roll_character():
+    assign_stats()
+    check_stat_total()
+    check_number_bigness()
+    while pass_or_fail(check_stat_total(), check_number_bigness()) == False:
+        assign_stats()
+        check_stat_total()
+        check_number_bigness()
+    return display_character()
+
 def display_character():
     guyID = f"""
     Optional prefix: {newGuy.prefix}
@@ -73,17 +83,4 @@ def display_character():
     return guyID
 
 if __name__ == "__main__":
-    #-- initializes the first set of stats for your new character and checks the
-    #-- arbitrary limits set on me by Rosetta Code
-    assign_stats()
-    check_stat_total()
-    check_number_bigness()
-
-    #-- if the first set of stats didn't satisfy then this loop will reroll
-    #-- until it does (and took me too long to figure out)
-    while pass_or_fail(check_stat_total(), check_number_bigness()) == False:
-        assign_stats()
-        check_stat_total()
-        check_number_bigness()
-
-    print(display_character())
+    print(roll_character())
