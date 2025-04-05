@@ -1,8 +1,7 @@
 # RPG-stat-generator
 
-A project I got from https://rosettacode.org.
 ----------
-The goal (paraphrased from https://rosettacode.org/wiki/RPG_attributes_generator):
+The goal:
 
  - ~~Generate 4 random integer values between 1 and 6~~ ✔
  - ~~Save the sum of the three largest integers~~ ✔
