@@ -20,6 +20,7 @@ Bonus goals:
 
  - Manual stat allocation
  - ~~Random names, races and classes for each generated character~~ ✔
+ - Create API for web access
 
 "Roleplaying Names List.csv" updated with help from my friends.
 
